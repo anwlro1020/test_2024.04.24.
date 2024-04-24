@@ -91,6 +91,7 @@ a:visited {
   position: absolute;
   top: 0px;
   left: 0px;
+  transition: top 0.5s 0s, transform 0.5s 0.5s;
 }
 #header .inner .btnCall::after {
   content: "";
@@ -101,6 +102,7 @@ a:visited {
   position: absolute;
   bottom: 0px;
   left: 0px;
+  transition: bottom 0.5s 0s, transform 0.5s 0.5s;
 }
 #header .inner .btnCall span {
   position: absolute;
@@ -111,6 +113,21 @@ a:visited {
   background-color: #000;
   top: 50%;
   margin-top: -1px;
+  transition: all 1s;
+}
+#header .inner .btnCall.on::before {
+  top: 50%;
+  margin-top: -1px;
+  transform: rotate(45deg);
+}
+#header .inner .btnCall.on::after {
+  bottom: 50%;
+  margin-bottom: -1px;
+  transform: rotate(-45deg);
+}
+#header .inner .btnCall.on span {
+  transform: translateX(100%);
+  opacity: 0;
 }
 #header .inner .menuMo {
   width: 270px;
@@ -121,6 +138,10 @@ a:visited {
   left: -270px;
   z-index: 10;
   padding: 35px 30px;
+  transition: all 0.5s;
+}
+#header .inner .menuMo.on {
+  left: 0px;
 }
 #header .inner .menuMo h2 {
   border-bottom: 1px solid #ccc;
@@ -565,6 +586,99 @@ a:visited {
   line-height: 1;
   font-family: arial;
   color: #444;
+}
+#header_sub .inner .btnCall {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  display: none;
+  width: 20px;
+  height: 20px;
+}
+#header_sub .inner .btnCall::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transition: top 0.5s 0s, transform 0.5s 0.5s;
+}
+#header_sub .inner .btnCall::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  transition: bottom 0.5s 0s, transform 0.5s 0.5s;
+}
+#header_sub .inner .btnCall span {
+  position: absolute;
+  text-indent: -9999999px;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  top: 50%;
+  margin-top: -1px;
+  transition: all 1s;
+}
+#header_sub .inner .btnCall.on::before {
+  top: 50%;
+  margin-top: -1px;
+  transform: rotate(45deg);
+}
+#header_sub .inner .btnCall.on::after {
+  bottom: 50%;
+  margin-bottom: -1px;
+  transform: rotate(-45deg);
+}
+#header_sub .inner .btnCall.on span {
+  transform: translateX(100%);
+  opacity: 0;
+}
+#header_sub .inner .menuMo {
+  width: 270px;
+  height: 100vh;
+  background-color: #333;
+  position: fixed;
+  top: 0px;
+  left: -270px;
+  z-index: 10;
+  padding: 35px 30px;
+  transition: all 0.5s;
+}
+#header_sub .inner .menuMo.on {
+  left: 0px;
+}
+#header_sub .inner .menuMo h2 {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 30px;
+}
+#header_sub .inner .menuMo h2 a {
+  font: bold 24px/1 "arial";
+  color: #fff;
+  display: block;
+  text-align: center;
+  margin-bottom: 5px;
+}
+#header_sub .inner .menuMo h2 span {
+  display: block;
+  font-size: 12px;
+  color: #aaa;
+  text-align: center;
+}
+#header_sub .inner .menuMo ul li a {
+  display: block;
+  padding: 20px 0px;
+  font: bold 14px/1 "맑은 고딕";
+  text-align: center;
+  color: #888;
 }
 #header_sub .inner .menuWeb #gnb {
   position: absolute;
